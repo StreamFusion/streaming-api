@@ -1,0 +1,22 @@
+{
+  "name": "streaming-api",
+  "version": "1.0.0",
+  "description": "Streaming utility api",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "start": "node build/index.js",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "ts-node-dev": "^2.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "promise-mysql": "^5.2.0"
+  }
+}
