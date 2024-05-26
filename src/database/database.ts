@@ -1,11 +1,14 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 import mysql from 'promise-mysql';
 
 const connection = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '991223',
-    database: 'streaming',
-    port: 3306,
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: parseInt(process.env.DB_PORT || '3306', 10),
 });
 
 const pool = connection.then((value) => {
@@ -14,4 +17,3 @@ const pool = connection.then((value) => {
 });
 
 export default pool;
-
